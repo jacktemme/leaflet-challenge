@@ -1,6 +1,5 @@
-
 // Create map variable
-  let myMap = L.map("map", {
+let myMap = L.map("map", {
     center: [
       37.09, -95.71
     ],
