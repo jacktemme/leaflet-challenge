@@ -80,7 +80,7 @@ d3.json(url).then(function (data) {
             let from = thresholds[i];
             let to = thresholds[i + 1];
             labels.push(
-                '<li style="background:' + colors[i] + '"></li> ' +
+                '<li class="legend-item" style="background:' + colors[i] + '"></li> ' +
                 from + (to ? '&ndash;' + to : '+'));
     
         }
