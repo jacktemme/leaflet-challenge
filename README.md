@@ -1,8 +1,15 @@
 # leaflet-challenge
 
 
-var colorScale = d3.scaleSequential(d3.interpolateHslLong("green", "red"))
-                               .domain([0, 100]); // Adjust domain based on your data range
+  let colorScale = d3.scaleThreshold().domain(thresholds).range(colors)
+  let color = colorScale(depth)
 
-            // Get the color based on the value
-            var color = colorScale(value);
+Make the legend have a white box around it:
+
+      .info.legend {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
