@@ -25,9 +25,9 @@ let baseMaps = {
 
 // Create map variable
 var myMap = L.map("map", {
-  center: [0, 0],
+  center: [37.09, -95.71],
   layers: [satellite], 
-  zoom: 2,
+  zoom: 3,
 });
 
 // Define arrays to hold the created data for tectonic plates and earthquakes
@@ -60,6 +60,7 @@ let url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.ge
 function onEachFeature (feature,layer) {
     layer.bindPopup(`<h3> Location: ${feature.properties.place}</h3><hr>
                     <h3> Magnitude: ${feature.properties.mag}</h3>
+                    <hr><h3>Earthquake Depth: ${feature.geometry.coordinates[2]} km</h3>
                     <hr><p>${new Date(feature.properties.time)}</p>`)}
 
 

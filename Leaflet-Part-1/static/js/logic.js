@@ -4,7 +4,7 @@
     center: [
       37.09, -95.71
     ],
-    zoom: 5,
+    zoom: 4,
   });
 
 // Add streetmap tile layer to map
@@ -21,6 +21,7 @@ let url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.ge
 function onEachFeature (feature,layer) {
     layer.bindPopup(`<h3> Location: ${feature.properties.place}</h3><hr>
                     <h3> Magnitude: ${feature.properties.mag}</h3>
+                    <hr><h3>Earthquake Depth: ${feature.geometry.coordinates[2]} km</h3>
                     <hr><p>${new Date(feature.properties.time)}</p>`)}
 
 
