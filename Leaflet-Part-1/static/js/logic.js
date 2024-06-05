@@ -14,7 +14,7 @@
 
 
 // define url for the chosen json endpoint
-let url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
+let url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson';
 
 
 // create popup function for geoJSON
@@ -22,7 +22,7 @@ function onEachFeature (feature,layer) {
     layer.bindPopup(`<h3> Location: ${feature.properties.place}</h3><hr>
                     <h3> Magnitude: ${feature.properties.mag}</h3>
                     <hr><h3>Earthquake Depth: ${feature.geometry.coordinates[2]} km</h3>
-                    <hr><p>${new Date(feature.properties.time)}</p>`)}
+                    <hr><p>${new Date(feature.properties.time)}</p>`)};
 
 
  // create circle marker function for geoJSON                  
